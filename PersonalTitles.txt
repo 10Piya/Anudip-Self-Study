@@ -1,0 +1,41 @@
+
+import java.util.*;
+
+public class PersonalTitles 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		double age;
+		char gender;
+		System.out.println("Enter Your Age :");
+		age=sc.nextDouble();
+		System.out.println("Enter your Gender :");
+		gender=sc.next().charAt(0);
+		if(gender=='m')
+		{
+			if(age>=16.0)
+			{
+				System.out.println("Mr.");
+			}
+			else 
+			{
+				System.out.println("Master");
+			}
+
+		}
+		if(gender=='f')
+		{
+			if(age>=16.0)
+			{
+				System.out.println("Ms.");
+			}
+			else 
+			{
+				System.out.println("Miss");
+			}
+		}
+		sc.close();
+	}
+
+}
