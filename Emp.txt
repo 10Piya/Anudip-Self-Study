@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Emp 
+{
+
+	public static void main(String[] args) 
+	{
+		String empName;
+		int empId;
+		float empSalary;
+		String empAddress;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Employee ID : ");
+		empId=sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter Name of Employee : ");
+		empName=sc.nextLine();
+		System.out.println("Enter Address of Employee : ");
+		empAddress = sc.nextLine();
+		System.out.println("Enter Employee Salary :");
+		empSalary=sc.nextFloat();
+		System.out.println("Employee ID : "+empId+"\nEmployee Name : "+empName+"\nEmployee Address : "+empAddress+"\nEmployee Salary : "+empSalary);
+		sc.close();
+	}
+
+}
