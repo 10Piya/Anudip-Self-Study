@@ -1,0 +1,124 @@
+
+import java.util.*;
+
+public class LoopDemo 
+{
+	public static void main(String[] args) 
+	{
+		int choice;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Select one Choice :");
+		System.out.println("1. Check Even or Odd Number");
+		System.out.println("2. Check Prime Number");
+		System.out.println("3. Check Palindrome Number");
+		System.out.println("4. Check Armstrong Number");
+		choice=sc.nextInt();
+		switch(choice)
+		{
+		case 1:
+			int min,max;
+			System.out.println("Enter Minimum Number : ");
+			min=sc.nextInt();
+			System.out.println("Enter Maximum Number : ");
+			max=sc.nextInt();
+			if(min<=max)
+			{
+				while(min<=max)
+				{
+					if(min%2==0)
+					{
+						System.out.println(min);
+					}
+					min++;
+				}
+			}
+			else
+			{
+				for(int i=min;i>=max;i--)
+				{
+					if(min%2==0)
+					{
+						System.out.println(i);
+					}
+				}
+			}
+			break;
+		case 2:
+			int num;
+			boolean b=false;
+			System.out.println("Enter the Number :");
+			num=sc.nextInt();
+			if(num==0 || num==1)
+			{
+				b=true;
+			}
+			for(int i=2;i<=num/2;i++)
+			{
+				if(num%i==0)
+				{
+					b=true;
+					break;
+				}
+			}
+			if(!b)
+			{
+				System.out.println("Number is Prime");
+			}
+			else
+			{
+				System.out.println("Number is Not Prime");
+			}
+			break;
+		case 3:
+			int n;
+			System.out.println("Enter the Number : ");
+			n=sc.nextInt();
+			int rev=0,rem;
+			int org=n;
+			while(n!=0)
+			{
+				rem=n%10;
+				rev=rev*10+rem;
+				n=n/10;
+			}
+			if(org==rev)
+			{
+				System.out.println("Number is Palindrome ");
+			}
+			else
+			{
+				System.out.println("Number is not Palindrome ");
+			}
+			break;
+		case 4:
+			int m;
+			System.out.println("Enter the Number :");
+			m=sc.nextInt();
+			int a=0;
+			int o=m;
+			while(m>0)
+			{
+				int x=0;
+				x=m%10;
+				x=x*x*x;
+				a=a+x;
+				m=m/10;
+			}
+			if(o==a)
+			{
+				System.out.println("Number is Armstrong ");
+			}
+			else
+			{
+				System.out.println("Number is not Armstrong");
+			}
+			break;
+			default:
+				System.out.println("Enter Correct Choice ");
+		}
+		
+		sc.close();
+	}
+	
+
+}
