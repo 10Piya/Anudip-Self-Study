@@ -1,0 +1,60 @@
+package com.String;
+
+public class StringBuilderMethodsDemo 
+{
+    public static void main(String[] args) 
+    {
+        // 1. Creating StringBuilder
+        StringBuilder sb = new StringBuilder("Hello");
+
+        // 2. append()
+        sb.append(" World");
+        System.out.println("After append: " + sb);
+
+        // 3. insert()
+        sb.insert(5, " Java");
+        System.out.println("After insert: " + sb);
+
+        // 4. replace()
+        sb.replace(6, 10, "C++");
+        System.out.println("After replace: " + sb);
+
+        // 5. delete()
+        sb.delete(5, 9);
+        System.out.println("After delete: " + sb);
+
+        // 6. deleteCharAt()
+        sb.deleteCharAt(0);
+        System.out.println("After deleteCharAt: " + sb);
+
+        // 7. reverse()
+        sb.reverse();
+        System.out.println("After reverse: " + sb);
+
+        // 8. length()
+        System.out.println("Length: " + sb.length());
+
+        // 9. capacity()
+        System.out.println("Capacity: " + sb.capacity());
+
+        // 10. ensureCapacity()
+        sb.ensureCapacity(100);
+        System.out.println("Capacity after ensureCapacity(100): " + sb.capacity());
+
+        // 11. charAt()
+        System.out.println("Char at 2: " + sb.charAt(2));
+
+        // 12. setCharAt()
+        sb.setCharAt(2, 'X');
+        System.out.println("After setCharAt(2, 'X'): " + sb);
+
+        // 13. substring()
+        String sub = sb.substring(1, 5);
+        System.out.println("Substring (1,5): " + sub);
+
+        // 14. setLength()
+        sb.setLength(5);
+        System.out.println("After setLength(5): " + sb);
+    }
+}
+
